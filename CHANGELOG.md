@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.1.3](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.2...v0.1.3) - 2026-03-24
+- chore(deps): update dependency @biomejs/biome to v2 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/9
+- chore(deps): update dependency typescript to v6 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/10
+
 ## [v0.1.2](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.1...v0.1.2) - 2026-03-24
 - chore: use PAT to release by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/12
 - chore(deps): update node.js (major) by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/13
