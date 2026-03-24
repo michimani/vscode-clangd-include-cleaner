@@ -1,5 +1,12 @@
 # C++ Unused Includes Remover
 
+[![VS Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/michimani.cpp-unused-includes-remover?label=VS%20Marketplace&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
+[![VS Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/michimani.cpp-unused-includes-remover)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
+[![VS Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/michimani.cpp-unused-includes-remover)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
+[![VS Marketplace Rating](https://img.shields.io/visual-studio-marketplace/stars/michimani.cpp-unused-includes-remover)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
+[![License: MIT](https://img.shields.io/github/license/michimani/vscode-clangd-include-cleaner)](https://github.com/michimani/vscode-clangd-include-cleaner/blob/main/LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/michimani/vscode-clangd-include-cleaner/ci.yml?label=CI)](https://github.com/michimani/vscode-clangd-include-cleaner/actions)
+
 A VS Code extension that automatically removes unused `#include` directives from C/C++ files using diagnostics from **clangd**.
 
 ## Features
