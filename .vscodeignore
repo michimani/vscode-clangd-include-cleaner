@@ -1,0 +1,16 @@
+# Development files
+.devcontainer/
+.vscode/
+src/
+.claude/
+
+# Config / tooling
+biome.json
+tsconfig.json
+.node-version
+.gitignore
+
+# Misc
+**/*.map
+**/.DS_Store
+**/Thumbs.db

@@ -1,0 +1,22 @@
+# Build output
+out/
+
+# Dependencies
+node_modules/
+
+# VS Code test infrastructure
+.vscode-test/
+
+# Packaged extension
+*.vsix
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db

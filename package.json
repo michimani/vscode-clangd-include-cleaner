@@ -1,0 +1,77 @@
+{
+  "name": "cpp-unused-includes-remover",
+  "displayName": "C++ Unused Includes Remover",
+  "publisher": "michimani",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michimani/vscode-clangd-include-cleaner"
+  },
+  "description": "Automatically removes unused #include directives in C/C++ files on save, using clangd diagnostics (requires llvm-vs-code-extensions.vscode-clangd).",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other", "Linters"],
+  "keywords": ["c++", "cpp", "clangd", "include", "unused"],
+  "activationEvents": [
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:cuda-cpp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cppUnusedIncludes.removeInCurrentFile",
+        "title": "C++: Remove Unused Includes in Current File"
+      },
+      {
+        "command": "cppUnusedIncludes.removeInWorkspace",
+        "title": "C++: Remove Unused Includes in Workspace"
+      },
+      {
+        "command": "cppUnusedIncludes.dumpDiagnostics",
+        "title": "C++: Dump Diagnostics to Output (Debug)"
+      }
+    ],
+    "configuration": {
+      "title": "C++ Unused Includes Remover",
+      "properties": {
+        "cppUnusedIncludes.enableOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically remove unused includes when saving a C/C++ file."
+        },
+        "cppUnusedIncludes.diagnosticSource": {
+          "type": "string",
+          "default": "clangd",
+          "description": "The diagnostic source name to use for detecting unused includes. Default is \"clangd\"."
+        },
+        "cppUnusedIncludes.waitForDiagnosticsMs": {
+          "type": "number",
+          "default": 100,
+          "description": "Milliseconds to wait for clangd diagnostics before applying fixes on save."
+        },
+        "cppUnusedIncludes.workspaceFileGlob": {
+          "type": "string",
+          "default": "**/*.{cpp,cc,cxx,c,h,hpp,hxx}",
+          "description": "Glob pattern for files to process in the workspace-wide command."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "biome lint .",
+    "format": "biome format .",
+    "check": "biome check ."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "@biomejs/biome": "^1.9.0",
+    "typescript": "^5.3.0"
+  }
+}
