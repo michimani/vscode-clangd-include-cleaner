@@ -12,9 +12,22 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Other", "Linters"],
-  "keywords": ["c++", "cpp", "clangd", "include", "unused"],
-  "activationEvents": ["onLanguage:c", "onLanguage:cpp", "onLanguage:cuda-cpp"],
+  "categories": [
+    "Other",
+    "Linters"
+  ],
+  "keywords": [
+    "c++",
+    "cpp",
+    "clangd",
+    "include",
+    "unused"
+  ],
+  "activationEvents": [
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:cuda-cpp"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -68,7 +81,7 @@
   "devDependencies": {
     "@types/vscode": "^1.85.0",
     "@types/node": "^24.0.0",
-    "@biomejs/biome": "^1.9.0",
+    "@biomejs/biome": "^2.0.0",
     "typescript": "^5.3.0"
   }
 }
