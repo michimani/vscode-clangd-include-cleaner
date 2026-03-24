@@ -5,6 +5,11 @@
 - chore(deps): update node.js (major) by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/13
 - chore: add icon by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/15
 
+## [v0.1.2](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.1...v0.1.2) - 2026-03-24
+- chore: use PAT to release by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/12
+- chore(deps): update node.js (major) by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/13
+- chore: add icon by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/15
+
 ## [v0.1.1](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.0...v0.1.1) - 2026-03-24
 - chore(deps): pin dependencies by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/8
 
