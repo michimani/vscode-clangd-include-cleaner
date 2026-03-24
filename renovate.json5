@@ -1,36 +1,41 @@
 {
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    "config:recommended",
-    "github>hatena/renovate-config:automergeTypesMinor",
-    "helpers:pinGitHubActionDigests",
+    'config:recommended',
+    'github>hatena/renovate-config:automergeTypesMinor',
+    'helpers:pinGitHubActionDigests',
   ],
-  reviewers: ["michimani"],
+  reviewers: [
+    'michimani',
+  ],
   customManagers: [
     {
-      // Track the Node.js major version embedded in the devcontainer image tag.
-      // e.g. mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm
-      customType: "regex",
-      fileMatch: ["^\\.devcontainer/devcontainer\\.json$"],
-      matchStrings: [
-        "\"image\":\\s*\"(?<depName>mcr\\.microsoft\\.com/devcontainers/typescript-node):(?<currentValue>[^\"]+)\"",
+      customType: 'regex',
+      managerFilePatterns: [
+        '/^\\.devcontainer/devcontainer\\.json$/',
       ],
-      datasourceTemplate: "docker",
+      matchStrings: [
+        '"image":\\s*"(?<depName>mcr\\.microsoft\\.com/devcontainers/typescript-node):(?<currentValue>[^"]+)"',
+      ],
+      datasourceTemplate: 'docker',
     },
   ],
   packageRules: [
     {
-      matchUpdateTypes: ["patch"],
+      matchUpdateTypes: [
+        'patch',
+      ],
       automerge: true,
-      labels: ["automerge"],
+      labels: [
+        'automerge',
+      ],
     },
     {
-      // Group Node.js version updates into a single PR.
-      groupName: "Node.js",
+      groupName: 'Node.js',
       matchPackageNames: [
-        "node",
-        "@types/node",
-        "mcr.microsoft.com/devcontainers/typescript-node",
+        'node',
+        '@types/node',
+        'mcr.microsoft.com/devcontainers/typescript-node',
       ],
     },
   ],
