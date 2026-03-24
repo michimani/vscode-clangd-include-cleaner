@@ -1,6 +1,7 @@
 # Development files
 .devcontainer/
 .vscode/
+.github/
 src/
 .claude/
 
@@ -9,6 +10,8 @@ biome.json
 tsconfig.json
 .node-version
 .gitignore
+.tagpr
+renovate.json5
 
 # Misc
 **/*.map

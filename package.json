@@ -13,11 +13,7 @@
   },
   "categories": ["Other", "Linters"],
   "keywords": ["c++", "cpp", "clangd", "include", "unused"],
-  "activationEvents": [
-    "onLanguage:c",
-    "onLanguage:cpp",
-    "onLanguage:cuda-cpp"
-  ],
+  "activationEvents": ["onLanguage:c", "onLanguage:cpp", "onLanguage:cuda-cpp"],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
