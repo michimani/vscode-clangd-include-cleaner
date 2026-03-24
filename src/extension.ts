@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
-import { removeUnusedIncludesInDocument, isUnusedIncludeDiagnostic } from "./remover";
 import { logger } from "./logger";
+import { isUnusedIncludeDiagnostic, removeUnusedIncludesInDocument } from "./remover";
 
 // Language IDs for C/C++ files
 const CPP_LANGUAGE_IDS = new Set(["c", "cpp", "cuda-cpp"]);
@@ -10,63 +10,54 @@ export function activate(context: vscode.ExtensionContext): void {
 
   // ---- Command: apply to current file ----
   context.subscriptions.push(
-    vscode.commands.registerCommand(
-      "cppUnusedIncludes.removeInCurrentFile",
-      async () => {
-        const editor = vscode.window.activeTextEditor;
-        if (!editor) {
-          vscode.window.showWarningMessage("No active editor.");
-          return;
-        }
-        if (!isCppDocument(editor.document)) {
-          vscode.window.showWarningMessage(
-            "Not a C/C++ file."
-          );
-          return;
-        }
-        const removed = await removeUnusedIncludesInDocument(editor.document);
-        vscode.window.showInformationMessage(
-          removed > 0
-            ? `Removed ${removed} unused include(s).`
-            : "No unused includes found."
-        );
+    vscode.commands.registerCommand("cppUnusedIncludes.removeInCurrentFile", async () => {
+      const editor = vscode.window.activeTextEditor;
+      if (!editor) {
+        vscode.window.showWarningMessage("No active editor.");
+        return;
       }
-    )
+      if (!isCppDocument(editor.document)) {
+        vscode.window.showWarningMessage("Not a C/C++ file.");
+        return;
+      }
+      const removed = await removeUnusedIncludesInDocument(editor.document);
+      vscode.window.showInformationMessage(
+        removed > 0 ? `Removed ${removed} unused include(s).` : "No unused includes found."
+      );
+    })
   );
 
   // ---- Command: apply to entire workspace ----
   context.subscriptions.push(
-    vscode.commands.registerCommand(
-      "cppUnusedIncludes.removeInWorkspace",
-      async () => {
-        await runWorkspaceCleanup();
-      }
-    )
+    vscode.commands.registerCommand("cppUnusedIncludes.removeInWorkspace", async () => {
+      await runWorkspaceCleanup();
+    })
   );
 
   // ---- Command: dump diagnostics for current file (debug) ----
   context.subscriptions.push(
-    vscode.commands.registerCommand(
-      "cppUnusedIncludes.dumpDiagnostics",
-      () => {
-        const editor = vscode.window.activeTextEditor;
-        if (!editor) {
-          vscode.window.showWarningMessage("No active editor.");
-          return;
-        }
-        const uri = editor.document.uri;
-        const all = vscode.languages.getDiagnostics(uri);
-        logger.info(`=== dumpDiagnostics: ${editor.document.fileName} (${all.length} entries) ===`);
-        if (all.length === 0) {
-          logger.info("  (no diagnostics — language server may not be running or compile_commands.json is missing)");
-        }
-        for (const d of all) {
-          logger.info(`  source="${d.source}" code="${formatCode(d.code)}" severity=${d.severity} line=${d.range.start.line + 1} message="${d.message}"`);
-        }
-        logger.info("=== end ===");
-        vscode.window.showInformationMessage(`Dumped ${all.length} diagnostic(s) to Output.`);
+    vscode.commands.registerCommand("cppUnusedIncludes.dumpDiagnostics", () => {
+      const editor = vscode.window.activeTextEditor;
+      if (!editor) {
+        vscode.window.showWarningMessage("No active editor.");
+        return;
       }
-    )
+      const uri = editor.document.uri;
+      const all = vscode.languages.getDiagnostics(uri);
+      logger.info(`=== dumpDiagnostics: ${editor.document.fileName} (${all.length} entries) ===`);
+      if (all.length === 0) {
+        logger.info(
+          "  (no diagnostics — language server may not be running or compile_commands.json is missing)"
+        );
+      }
+      for (const d of all) {
+        logger.info(
+          `  source="${d.source}" code="${formatCode(d.code)}" severity=${d.severity} line=${d.range.start.line + 1} message="${d.message}"`
+        );
+      }
+      logger.info("=== end ===");
+      vscode.window.showInformationMessage(`Dumped ${all.length} diagnostic(s) to Output.`);
+    })
   );
 
   // ---- On-save hook ----
@@ -113,18 +104,24 @@ async function applyOnSave(document: vscode.TextDocument): Promise<void> {
   const waitMs = config.get<number>("waitForDiagnosticsMs", 100);
   const source = config.get<string>("diagnosticSource", "clangd");
 
-  logger.info(`[onSave] ${document.fileName}: saved, waiting ${waitMs}ms for diagnostics (source="${source}")`);
+  logger.info(
+    `[onSave] ${document.fileName}: saved, waiting ${waitMs}ms for diagnostics (source="${source}")`
+  );
   await delay(waitMs);
 
   const allDiagnostics = vscode.languages.getDiagnostics(document.uri);
   if (allDiagnostics.length === 0) {
-    logger.info(`[onSave] ${document.fileName}: no diagnostics (language server may still be analyzing — try increasing waitForDiagnosticsMs)`);
+    logger.info(
+      `[onSave] ${document.fileName}: no diagnostics (language server may still be analyzing — try increasing waitForDiagnosticsMs)`
+    );
     return;
   }
 
   logger.info(`[onSave] ${document.fileName}: ${allDiagnostics.length} diagnostic(s):`);
   for (const d of allDiagnostics) {
-    logger.info(`  source="${d.source}" code="${formatCode(d.code)}" severity=${d.severity} message="${d.message}"`);
+    logger.info(
+      `  source="${d.source}" code="${formatCode(d.code)}" severity=${d.severity} message="${d.message}"`
+    );
   }
 
   const edits = await collectUnusedIncludeEdits(document, source, allDiagnostics);
@@ -152,15 +149,9 @@ async function applyOnSave(document: vscode.TextDocument): Promise<void> {
 // ---------------------------------------------------------------------------
 async function runWorkspaceCleanup(): Promise<void> {
   const config = vscode.workspace.getConfiguration("cppUnusedIncludes");
-  const glob = config.get<string>(
-    "workspaceFileGlob",
-    "**/*.{cpp,cc,cxx,c,h,hpp,hxx}"
-  );
+  const glob = config.get<string>("workspaceFileGlob", "**/*.{cpp,cc,cxx,c,h,hpp,hxx}");
 
-  const files = await vscode.workspace.findFiles(
-    glob,
-    "**/node_modules/**"
-  );
+  const files = await vscode.workspace.findFiles(glob, "**/node_modules/**");
 
   if (files.length === 0) {
     vscode.window.showInformationMessage("No matching files found.");
@@ -227,8 +218,7 @@ async function collectUnusedIncludeEdits(
   source: string,
   allDiagnostics: vscode.Diagnostic[]
 ): Promise<vscode.TextEdit[]> {
-  const diagnostics = allDiagnostics
-    .filter((d) => isUnusedIncludeDiagnostic(d, source));
+  const diagnostics = allDiagnostics.filter((d) => isUnusedIncludeDiagnostic(d, source));
 
   if (diagnostics.length === 0) {
     return [];
@@ -249,18 +239,10 @@ async function collectUnusedIncludeEdits(
  * Returns the Range covering the entire line (including the newline),
  * or to end-of-line for the last line.
  */
-function getFullLineRange(
-  document: vscode.TextDocument,
-  lineIndex: number
-): vscode.Range {
+function getFullLineRange(document: vscode.TextDocument, lineIndex: number): vscode.Range {
   const line = document.lineAt(lineIndex);
   if (lineIndex < document.lineCount - 1) {
-    return new vscode.Range(
-      lineIndex,
-      0,
-      lineIndex + 1,
-      0
-    );
+    return new vscode.Range(lineIndex, 0, lineIndex + 1, 0);
   }
   // Last line: no trailing newline
   return new vscode.Range(lineIndex, 0, lineIndex, line.text.length);

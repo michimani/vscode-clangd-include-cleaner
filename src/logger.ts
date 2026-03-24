@@ -4,9 +4,7 @@ class Logger {
   private readonly channel: vscode.OutputChannel;
 
   constructor() {
-    this.channel = vscode.window.createOutputChannel(
-      "C++ Unused Includes Remover"
-    );
+    this.channel = vscode.window.createOutputChannel("C++ Unused Includes Remover");
   }
 
   info(message: string): void {

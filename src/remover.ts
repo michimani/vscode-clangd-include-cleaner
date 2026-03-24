@@ -22,9 +22,7 @@ export async function removeUnusedIncludesInDocument(
     return 0;
   }
 
-  logger.info(
-    `${document.fileName}: ${diagnostics.length} unused include(s) detected`
-  );
+  logger.info(`${document.fileName}: ${diagnostics.length} unused include(s) detected`);
 
   // Sort descending by line number to avoid line-number drift when deleting
   diagnostics.sort((a, b) => b.range.start.line - a.range.start.line);
@@ -43,9 +41,7 @@ export async function removeUnusedIncludesInDocument(
     // Safety check: verify the line is actually an #include
     const lineText = document.lineAt(lineIndex).text;
     if (!isIncludeLine(lineText)) {
-      logger.warn(
-        `line ${lineIndex + 1} is not an #include, skipping: "${lineText}"`
-      );
+      logger.warn(`line ${lineIndex + 1} is not an #include, skipping: "${lineText}"`);
       continue;
     }
 
@@ -108,10 +104,7 @@ function isIncludeLine(text: string): boolean {
  * Returns a Range covering the entire line including its trailing newline.
  * For the last line, returns a range to end-of-line without a newline.
  */
-function getFullLineRange(
-  document: vscode.TextDocument,
-  lineIndex: number
-): vscode.Range {
+function getFullLineRange(document: vscode.TextDocument, lineIndex: number): vscode.Range {
   if (lineIndex < document.lineCount - 1) {
     return new vscode.Range(lineIndex, 0, lineIndex + 1, 0);
   }
