@@ -1,6 +1,6 @@
 {
   "name": "C++ Unused Includes Remover",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:4-22-bookworm",
   "runArgs": ["--name", "vscode-clangd-include-cleaner"],
   "postCreateCommand": "bash .devcontainer/scripts/setup.sh",
   "customizations": {
