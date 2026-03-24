@@ -7,7 +7,7 @@
     "url": "https://github.com/michimani/vscode-clangd-include-cleaner"
   },
   "description": "Automatically removes unused #include directives in C/C++ files on save, using clangd diagnostics (requires llvm-vs-code-extensions.vscode-clangd).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.85.0"
   },
