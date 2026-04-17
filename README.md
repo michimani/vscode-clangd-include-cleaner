@@ -1,9 +1,9 @@
 # C++ Unused Includes Remover
 
-[![Version](https://vsmarketplacebadges.dev/version/michimani.cpp-unused-includes-remover.svg)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
-[![Installs](https://vsmarketplacebadges.dev/installs/michimani.cpp-unused-includes-remover.svg)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
-[![Downloads](https://vsmarketplacebadges.dev/downloads/michimani.cpp-unused-includes-remover.svg)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
-[![Rating](https://vsmarketplacebadges.dev/rating-star/michimani.cpp-unused-includes-remover.svg)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
+[![Version](https://vsmarketplacebadges.dev/version/michimani.cpp-unused-includes-remover.png)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
+[![Installs](https://vsmarketplacebadges.dev/installs/michimani.cpp-unused-includes-remover.png)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
+[![Downloads](https://vsmarketplacebadges.dev/downloads/michimani.cpp-unused-includes-remover.png)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
+[![Rating](https://vsmarketplacebadges.dev/rating-star/michimani.cpp-unused-includes-remover.png)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
 [![License: MIT](https://img.shields.io/github/license/michimani/vscode-clangd-include-cleaner)](https://github.com/michimani/vscode-clangd-include-cleaner/blob/main/LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/michimani/vscode-clangd-include-cleaner/ci.yml?label=CI)](https://github.com/michimani/vscode-clangd-include-cleaner/actions)
 
