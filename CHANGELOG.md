@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.1.5](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.4...v0.1.5) - 2026-04-17
+- chore: replace VS Marketplace badges from shields to vsmarketplacebadges by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/35
+
 ## [v0.1.4](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.3...v0.1.4) - 2026-04-17
 - chore: add some badges by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/19
 - chore(deps): update node.js to v24.14.1 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/21
