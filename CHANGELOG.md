@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.1.6](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.5...v0.1.6) - 2026-05-02
+- chore(deps): update dependency @types/vscode to v1.118.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/39
+- chore(deps): update dependency @biomejs/biome to v2.4.14 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/41
+
 ## [v0.1.5](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.4...v0.1.5) - 2026-04-23
 - chore: replace VS Marketplace badges from shields to vsmarketplacebadges by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/35
 - chore(deps): update actions/setup-node digest to 48b55a0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/37
