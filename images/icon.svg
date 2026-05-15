@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <title>C++ Unused Includes Remover</title>
+  
+  <rect x="0" y="0" width="128" height="128" rx="22" ry="22" fill="#004482"></rect>
+  
+  <rect x="20" y="34" width="16" height="12" rx="2" fill="#ffffff"></rect>
+  <rect x="40" y="34" width="68" height="12" rx="2" fill="#ffffff" fill-opacity="0.55"></rect>
+  
+  <text x="20" y="68" font-family="&#39;JetBrains Mono&#39;,&#39;SFMono-Regular&#39;,&#39;Menlo&#39;,&#39;Consolas&#39;,monospace" font-weight="700" font-size="14" fill="#ffffff" fill-opacity="0.55">#include</text>
+  <line x1="16" y1="64" x2="100" y2="64" stroke="#c0533a" stroke-width="4" stroke-linecap="round"></line>
+  
+  <rect x="20" y="82" width="16" height="12" rx="2" fill="#ffffff"></rect>
+  <rect x="40" y="82" width="60" height="12" rx="2" fill="#ffffff" fill-opacity="0.55"></rect>
+</svg>
