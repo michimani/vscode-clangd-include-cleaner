@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.0.0](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.6...v1.0.0) - 2026-05-15
+- chore(deps): update dependency @types/node to v24.12.4 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/45
+- chore(deps): update dependency @types/vscode to v1.120.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/47
+- feat: new icon by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/48
+
 ## [v0.1.6](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v0.1.5...v0.1.6) - 2026-05-09
 - chore(deps): update dependency @types/vscode to v1.118.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/39
 - chore(deps): update dependency @biomejs/biome to v2.4.14 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/41
