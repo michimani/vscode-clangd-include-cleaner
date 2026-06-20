@@ -1,5 +1,14 @@
 # Changelog
 
+## [v1.0.2](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.1...v1.0.2) - 2026-06-20
+
+- chore(deps): update node.js to v24.13.1 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/55
+- chore(deps): update node.js to v24.13.2 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/57
+- chore(deps): update dependency @biomejs/biome to v2.5.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/58
+- chore(deps): update dependency @types/vscode to v1.125.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/59
+- chore(deps): update actions/checkout action to v7 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/61
+- chore(deps): update node.js to v24.17.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/60
+
 ## [v1.0.1](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.0...v1.0.1) - 2026-06-04
 
 - chore(deps): update node.js to v24.16.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/49
