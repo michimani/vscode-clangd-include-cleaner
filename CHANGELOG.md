@@ -1,5 +1,23 @@
 # Changelog
 
+## [v1.0.4](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.3...v1.0.4) - 2026-08-19
+
+- chore(deps): update dependency @biomejs/biome to v2.5.3 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/67
+- chore(deps): update dependency @types/node to v24.13.3 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/68
+- chore(deps): update songmu/tagpr digest to d1b8138 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/73
+- chore(deps): update actions/setup-node action to v7 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/72
+- chore(deps): update dependency typescript to v7 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/70
+- chore(deps): update dependency @biomejs/biome to v2.5.4 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/74
+- chore(deps): update dependency @biomejs/biome to v2.5.5 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/76
+- chore(deps): update actions/checkout digest to 3d3c42e by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/75
+- chore(deps): update dependency @biomejs/biome to v2.5.6 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/77
+- chore(deps): update node.js to v24.18.1 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/78
+- chore(deps): update dependency @biomejs/biome to v2.5.7 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/80
+- chore(deps): update node.js to v24.19.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/79
+- chore(deps): update dependency @biomejs/biome to v2.5.8 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/81
+- chore(deps): update dependency @biomejs/biome to v2.5.9 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/82
+- chore(deps): update dependency @types/vscode to v1.134.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/83
+
 ## [v1.0.3](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.2...v1.0.3) - 2026-07-05
 
 - chore(deps): update dependency @biomejs/biome to v2.5.1 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/62
