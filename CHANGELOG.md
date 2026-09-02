@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.0.5](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.4...v1.0.5) - 2026-09-02
+
+- chore(deps): update dependency @biomejs/biome to v2.5.10 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/84
+- chore(deps): update songmu/tagpr digest to 242e229 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/86
+- chore(deps): update node.js to v24.20.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/87
+- chore(deps): update dependency @biomejs/biome to v2.5.11 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/88
+- chore(config): migrate Renovate config by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/89
+
 ## [v1.0.4](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.3...v1.0.4) - 2026-08-19
 
 - chore(deps): update dependency @biomejs/biome to v2.5.3 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/67
