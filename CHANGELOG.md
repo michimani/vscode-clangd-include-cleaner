@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.0.6](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.5...v1.0.6) - 2026-09-06
+
+- chore(deps): update dependency @types/vscode to v1.136.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/90
+- chore(deps): update dependency @biomejs/biome to v2.5.12 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/92
+- chore(deps): update songmu/tagpr digest to 7ebae2d by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/93
+
 ## [v1.0.5](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.4...v1.0.5) - 2026-09-02
 
 - chore(deps): update dependency @biomejs/biome to v2.5.10 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/84
