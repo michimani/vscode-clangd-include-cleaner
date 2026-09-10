@@ -10,7 +10,7 @@
   ],
   // Wait before proposing updates, so malware/scanners have time to catch
   // supply-chain attacks (e.g. compromised npm packages) before we pull them in.
-  minimumReleaseAge: '3 days',
+  minimumReleaseAge: '7 days',
   internalChecksFilter: 'strict',
   customManagers: [
     {
