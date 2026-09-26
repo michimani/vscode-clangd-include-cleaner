@@ -1,5 +1,19 @@
 # Changelog
 
+## [v1.0.6](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.5...v1.0.6) - 2026-09-26
+
+- chore(deps): update dependency @types/vscode to v1.136.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/90
+- chore(deps): update dependency @biomejs/biome to v2.5.12 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/92
+- chore(deps): update songmu/tagpr digest to 7ebae2d by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/93
+- chore(deps): update dependency @types/vscode to v1.137.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/95
+- chore(deps): update node.js by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/94
+- chore(deps): update dependency @biomejs/biome to v2.5.13 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/96
+- chore(renovate): require minimumReleaseAge before proposing updates by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/97
+- chore(deps): update dependency @types/node to v24.13.5 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/98
+- chore(deps): update dependency @biomejs/biome to v2.5.14 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/99
+- chore(deps): update dependency @types/vscode to v1.138.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/100
+- chore(deps): update dependency @types/node to v24.13.6 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/101
+
 ## [v1.0.5](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.4...v1.0.5) - 2026-09-02
 
 - chore(deps): update dependency @biomejs/biome to v2.5.10 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/84
