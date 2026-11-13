@@ -11,11 +11,11 @@ A VS Code extension that automatically removes unused `#include` directives from
 
 ## Features
 
-| Feature | Description |
-|---------|-------------|
-| **Auto-remove on save** | Removes unused includes every time you save a C/C++ file |
-| **Command: current file** | Manually apply to the active file |
-| **Command: workspace** | Apply to all C/C++ files in the workspace at once |
+| Feature                     | Description                                                   |
+| --------------------------- | ------------------------------------------------------------- |
+| **Auto-remove on save**     | Removes unused includes every time you save a C/C++ file      |
+| **Command: current file**   | Manually apply to the active file                             |
+| **Command: workspace**      | Apply to all C/C++ files in the workspace at once             |
 | **Debug: dump diagnostics** | Print all diagnostics for the active file to the Output panel |
 
 ## Prerequisites
@@ -28,6 +28,7 @@ A VS Code extension that automatically removes unused `#include` directives from
 The VS Code clangd extension requires the **clangd binary** to be installed separately.
 
 **Debian/Ubuntu (via LLVM apt repository):**
+
 ```bash
 # Add LLVM GPG key
 wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key \
@@ -120,11 +121,11 @@ Press `F5` in VS Code to launch the Extension Development Host.
 
 ## Commands
 
-| Command | Description |
-|---------|-------------|
-| `C++: Remove Unused Includes in Current File` | Remove unused includes from the active file |
-| `C++: Remove Unused Includes in Workspace` | Apply to all C/C++ files in the workspace |
-| `C++: Dump Diagnostics to Output (Debug)` | Print diagnostics for the active file to the Output panel |
+| Command                                       | Description                                               |
+| --------------------------------------------- | --------------------------------------------------------- |
+| `C++: Remove Unused Includes in Current File` | Remove unused includes from the active file               |
+| `C++: Remove Unused Includes in Workspace`    | Apply to all C/C++ files in the workspace                 |
+| `C++: Dump Diagnostics to Output (Debug)`     | Print diagnostics for the active file to the Output panel |
 
 Run commands from the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
 
@@ -136,6 +137,7 @@ Run commands from the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
 2. Save a C++ file and check the log.
 
 **`no diagnostics`** — clangd is not providing diagnostics. Check that:
+
 - The clangd VS Code extension is installed and active.
 - The clangd binary is installed (`clangd --version` in the terminal).
 - A `.clangd` file with `UnusedIncludes: Strict` exists at the project root.
