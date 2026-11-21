@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.0.8](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.7...v1.0.8) - 2026-11-21
+
+- chore(deps): update node.js to v26 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/110
+- docs: add Open VSX badges and make README editor-neutral by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/121
+
 ## [v1.0.7](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.6...v1.0.7) - 2026-11-21
 
 - chore(deps): update node.js to v24.22.3 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/116
