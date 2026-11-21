@@ -1,13 +1,22 @@
 # C++ Unused Includes Remover
 
+**Visual Studio Marketplace**
+
 [![Version](https://vsmarketplacebadges.dev/version/michimani.cpp-unused-includes-remover.png)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
 [![Installs](https://vsmarketplacebadges.dev/installs/michimani.cpp-unused-includes-remover.png)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
 [![Downloads](https://vsmarketplacebadges.dev/downloads/michimani.cpp-unused-includes-remover.png)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
 [![Rating](https://vsmarketplacebadges.dev/rating-star/michimani.cpp-unused-includes-remover.png)](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover)
+
+**Open VSX**
+
+[![Open VSX Version](https://img.shields.io/open-vsx/v/michimani/cpp-unused-includes-remover?label=version)](https://open-vsx.org/extension/michimani/cpp-unused-includes-remover)
+[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/michimani/cpp-unused-includes-remover?label=downloads)](https://open-vsx.org/extension/michimani/cpp-unused-includes-remover)
+[![Open VSX Rating](https://img.shields.io/open-vsx/rating/michimani/cpp-unused-includes-remover?label=rating)](https://open-vsx.org/extension/michimani/cpp-unused-includes-remover)
+
 [![License: MIT](https://img.shields.io/github/license/michimani/vscode-clangd-include-cleaner)](https://github.com/michimani/vscode-clangd-include-cleaner/blob/main/LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/michimani/vscode-clangd-include-cleaner/ci.yml?label=CI)](https://github.com/michimani/vscode-clangd-include-cleaner/actions)
 
-A VS Code extension that automatically removes unused `#include` directives from C/C++ files using diagnostics from **clangd**.
+An extension for VS Code and compatible editors (Cursor, Windsurf, VSCodium, etc.) that automatically removes unused `#include` directives from C/C++ files using diagnostics from **clangd**.
 
 ## Features
 
@@ -20,12 +29,12 @@ A VS Code extension that automatically removes unused `#include` directives from
 
 ## Prerequisites
 
-- [clangd VS Code extension](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) (`llvm-vs-code-extensions.vscode-clangd`)
+- clangd extension (`llvm-vs-code-extensions.vscode-clangd`), available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) and [Open VSX](https://open-vsx.org/extension/llvm-vs-code-extensions/vscode-clangd)
 - clangd binary installed on the system (clangd 17+ recommended for `-std=c++23` support)
 
 ### Installing the clangd binary
 
-The VS Code clangd extension requires the **clangd binary** to be installed separately.
+The clangd extension requires the **clangd binary** to be installed separately.
 
 **Debian/Ubuntu (via LLVM apt repository):**
 
@@ -143,7 +152,7 @@ Run commands from the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
 
 **`no diagnostics`** — clangd is not providing diagnostics. Check that:
 
-- The clangd VS Code extension is installed and active.
+- The clangd extension (`llvm-vs-code-extensions.vscode-clangd`) is installed and active.
 - The clangd binary is installed (`clangd --version` in the terminal).
 - A `.clangd` file with `UnusedIncludes: Strict` exists at the project root.
 - The file has been open long enough for clangd to finish analyzing.
