@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.0.7](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.6...v1.0.7) - 2026-11-21
+
+- chore(deps): update node.js to v24.22.3 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/116
+- chore(deps): update dependency @types/vscode to v1.146.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/118
+- chore(deps): update dependency @biomejs/biome to v2.6.7 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/119
+- feat: publish extension to Open VSX on release by @michimani in https://github.com/michimani/vscode-clangd-include-cleaner/pull/120
+
 ## [v1.0.6](https://github.com/michimani/vscode-clangd-include-cleaner/compare/v1.0.5...v1.0.6) - 2026-11-13
 
 - chore(deps): update dependency @types/vscode to v1.136.0 by @renovate[bot] in https://github.com/michimani/vscode-clangd-include-cleaner/pull/90
