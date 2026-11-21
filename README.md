@@ -82,6 +82,11 @@ With this setting, clangd handles all language features and the Microsoft C/C++ 
 
 ## Installation
 
+### From a registry
+
+- **VS Code**: Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=michimani.cpp-unused-includes-remover).
+- **Cursor, Windsurf, VSCodium, and other VS Code forks**: Install from [Open VSX](https://open-vsx.org/extension/michimani/cpp-unused-includes-remover).
+
 ### From VSIX
 
 ```bash
