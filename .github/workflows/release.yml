@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      id-token: write # Required for Open VSX trusted publishing (OIDC)
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
@@ -21,16 +22,29 @@ jobs:
         run: npm ci
 
       - name: Package VSIX
-        run: npx vsce package
+        id: package
+        run: |
+          npx vsce package
+          VSIX_FILE=$(ls -- *.vsix)
+          echo "vsix=$VSIX_FILE" >> "$GITHUB_OUTPUT"
 
       - name: Upload VSIX to GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          VSIX_FILE=$(ls *.vsix)
-          gh release upload ${{ github.ref_name }} "$VSIX_FILE"
+          TAG_NAME: ${{ github.ref_name }}
+          VSIX_FILE: ${{ steps.package.outputs.vsix }}
+        run: gh release upload "$TAG_NAME" "$VSIX_FILE"
 
       - name: Publish to VS Code Marketplace
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
-        run: npx vsce publish --pat "$VSCE_PAT"
+          VSIX_FILE: ${{ steps.package.outputs.vsix }}
+        run: npx vsce publish --packagePath "$VSIX_FILE" --pat "$VSCE_PAT"
+
+      - name: Publish to Open VSX
+        # Run even if the Marketplace publish fails, as long as the VSIX was built.
+        if: ${{ !cancelled() && steps.package.outcome == 'success' }}
+        env:
+          VSIX_FILE: ${{ steps.package.outputs.vsix }}
+        # Uses Open VSX trusted publishing (GitHub Actions OIDC); no access token is needed.
+        run: npx ovsx publish --packagePath "$VSIX_FILE" --trusted-publishing --skip-duplicate

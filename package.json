@@ -79,9 +79,10 @@
     "check": "biome check ."
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
-    "@types/node": "^24.0.0",
     "@biomejs/biome": "^2.0.0",
+    "@types/node": "^24.0.0",
+    "@types/vscode": "^1.85.0",
+    "ovsx": "^1.4.0",
     "typescript": "^7.0.0"
   }
 }
